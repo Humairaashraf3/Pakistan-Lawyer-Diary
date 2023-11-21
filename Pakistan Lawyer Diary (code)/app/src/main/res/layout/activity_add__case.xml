@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lawyer.Add_Case"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:onClick="back"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Case"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorWhite"
+
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/done_icon"
+            android:layout_gravity="right"
+            android:onClick="saveCase"
+            android:layout_marginRight="20dp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorWhite">
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CASE DETAILS"
+                android:textColorLink="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingLeft="7dp"
+                android:background="@color/light_green"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="9dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Case Title"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorRed"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_toRightOf="@+id/tv1"/>
+
+                <EditText
+                    android:id="@+id/case_title"
+                    android:layout_width="231dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="53dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/tv1"
+                    android:background="@drawable/custom_input"
+                    android:inputType="text"
+                    android:padding="4dp" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv1"
+                    android:layout_marginTop="30dp"
+                    android:text="Court Name"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textSize="20sp"
+                    android:layout_below="@id/tv1"
+                    android:textColor="@color/colorRed"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_toRightOf="@+id/tv2"/>
+
+                <RelativeLayout
+                    android:id="@+id/rv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/case_title"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@id/tv2">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/court_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/custom_input"
+                        android:hint="Select Court"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="4dp" />
+
+
+                    <ImageView
+                        android:id="@+id/dd1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="4dp"
+                        android:src="@drawable/drop_down_icon" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv2"
+                    android:layout_marginTop="30dp"
+                    android:text="Case Type"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textSize="20sp"
+                    android:layout_below="@id/tv2"
+                    android:textColor="@color/colorRed"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_toRightOf="@+id/tv3"/>
+
+                <RelativeLayout
+                    android:id="@+id/rv2"
+                    android:layout_width="231dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/rv1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="49dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_toRightOf="@id/tv3">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/case_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/custom_input"
+                        android:hint="Select Case Type"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="4dp"
+                        android:selectAllOnFocus="true" />
+
+                    <ImageView
+                        android:id="@+id/dd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="4dp"
+                        android:src="@drawable/drop_down_icon" />
+                </RelativeLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rv2"
+                    android:layout_marginTop="30dp"
+                    android:text="Case Year"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textSize="20sp"
+                    android:layout_below="@id/rv2"
+                    android:textColor="@color/colorRed"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_toRightOf="@+id/tv5"/>
+
+                <EditText
+                    android:id="@+id/case_year"
+                    android:layout_width="216dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/rv2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/tv6"
+                    android:background="@drawable/custom_input"
+                    android:inputType="number"
+                    android:padding="4dp" />
+
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv5"
+                    android:layout_marginTop="30dp"
+                    android:text="On Behalf Of"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorRed"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_below="@id/tv5"
+                    android:layout_toRightOf="@+id/tv6"/>
+                <AutoCompleteTextView
+                    android:id="@+id/on_behalf"
+                    android:layout_width="168dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/case_year"
+                    android:layout_marginLeft="31dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/tv6"
+                    android:inputType="text"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/custom_input"
+                    android:padding="4dp"
+                    android:drawableEnd="@drawable/drop_down_icon"
+                    android:drawableRight="@drawable/drop_down_icon"
+                    android:selectAllOnFocus="true"
+                    android:imeOptions="actionNext"
+                    android:hint="Select on behalf of"
+                    />
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PARTY DETAILS"
+                android:textColorLink="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingLeft="7dp"
+                android:background="@color/light_green"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="9dp">
+
+                <TextView
+                    android:id="@+id/tv7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Party Name"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorRed"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_toRightOf="@+id/tv7"/>
+
+                <RelativeLayout
+                    android:id="@+id/rv3"
+                    android:layout_width="168dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_toRightOf="@id/tv7"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentRight="true">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/party_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:background="@drawable/custom_input"
+                        android:padding="4dp"
+                        android:selectAllOnFocus="true"
+                        android:hint="Select party"
+                        android:imeOptions="actionNext"
+                        />
+
+                    <ImageView
+                        android:id="@+id/dd3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/drop_down_icon"
+                        android:padding="4dp"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv7"
+                    android:layout_marginTop="30dp"
+                    android:text="Contact No"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textSize="20sp"
+                    android:layout_below="@id/tv7"
+                    android:textColor="@color/colorRed"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_toRightOf="@+id/tv8"/>
+
+                <EditText
+                    android:id="@+id/contact_no"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/rv3"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_input"
+                    android:inputType="phone"
+                    android:padding="4dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_toRightOf="@id/tv8"/>
+
+                <TextView
+                    android:id="@+id/tv9"
+                    android:layout_width="110dp"
+                    android:layout_height="78dp"
+                    android:layout_below="@id/tv8"
+                    android:layout_marginTop="20dp"
+                    android:text="Adverse Advocate Name"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <EditText
+                    android:id="@+id/adverse_adv"
+                    android:layout_width="168dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/contact_no"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@id/tv9"
+                    android:layout_alignParentRight="true"
+                    android:inputType="text"
+                    android:background="@drawable/custom_input"
+                    android:padding="4dp" />
+
+                <TextView
+                    android:id="@+id/tv10"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv9"
+                    android:layout_marginTop="15dp"
+                    android:text="Adverse Advocate Contact No"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/adverse_adv_no"
+                    android:layout_width="165dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/adverse_adv"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_toRightOf="@id/tv10"
+                    android:inputType="phone"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/custom_input"
+                    android:padding="4dp"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OTHER DETAILS"
+                android:textColorLink="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingLeft="7dp"
+                android:background="@color/light_green"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="9dp">
+                <TextView
+                    android:id="@+id/tv11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Respondent"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/respodent"
+                    android:layout_width="168dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/tv11"
+                    android:background="@drawable/custom_input"
+                    android:inputType="text"
+                    android:padding="4dp"
+                    />
+                <TextView
+                    android:id="@+id/tv12"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/respodent"
+                    android:text="Filed U/Sec"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/filed_u"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@id/respodent"
+                    android:layout_toRightOf="@id/tv12"
+                    android:inputType="text"
+                    android:background="@drawable/custom_input"
+                    android:layout_alignParentRight="true"
+                    android:padding="4dp"
+                    />
+
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MEETING DETAILS"
+                android:textColorLink="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@color/light_green"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="9dp">
+                <TextView
+                    android:id="@+id/tvmeeting"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Meeting Date"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/date"
+                    android:onClick="setDate"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_input"
+                    android:layout_toRightOf="@id/tvmeeting"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:hint="Tap to Select Date"
+                    android:focusable="false"
+                   />
+                <ImageButton
+                    android:id="@+id/remove_date"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="33dp"
+                    android:background="@drawable/cancel_icon"
+                    android:visibility="gone"
+
+                    />
+                <TextView
+                    android:id="@+id/tvtime"
+                    android:layout_below="@id/date"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Meeting Time"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/custom_input"
+                    android:id="@+id/time"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/tvtime"
+                    android:onClick="setTime"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:hint="Tap to Select Time"
+                    android:focusable="false"/>
+                <ImageButton
+                    android:id="@+id/remove_time"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/date"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="33dp"
+                    android:background="@drawable/cancel_icon"
+                    android:visibility="gone"
+
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

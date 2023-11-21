@@ -1,0 +1,33 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- Customize theme without title bar. -->
+<style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+
+</style>
+
+
+    <style name="chatTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- Customize date picker. -->
+    <style name="DatePicker">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:background">@color/green</item>
+        <item name="colorAccent">@color/green</item>
+    </style>
+    <style name="TimePicker">
+        <item name="android:windowFrame">@null</item>
+        <item name="colorAccent">@color/green</item>
+    </style>
+
+</resources>

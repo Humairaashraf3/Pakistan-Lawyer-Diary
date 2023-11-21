@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lawyer.MainActivity"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+      >
+        <include layout="@layout/toolbar"
+            android:id="@+id/toolbar"/>
+        <!--<androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/green"
+            android:id="@+id/toolbar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:elevation="4dp">
+             <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pakistan Lawyer Diary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/help"
+        android:layout_marginLeft="110dp"/>
+        </androidx.appcompat.widget.Toolbar>-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Select Day to View Schedule of that day."
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="3px"
+                    ></TextView>-->
+
+
+
+                <TextView
+                    android:id="@+id/main_YYMM_Tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/green"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:text="date" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+                    <ImageView
+                        android:id="@+id/forward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/backword_icon"
+                        android:layout_alignParentLeft="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:text="current month"
+                        android:id="@+id/current_month"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <ImageView
+                        android:id="@+id/backword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/forward_icon" />
+
+                </RelativeLayout>
+
+
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#ccc" />-->
+
+                <sun.bob.mcalendarview.views.WeekColumnView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="12dp"
+                    android:background="@drawable/bg5"
+                    android:backgroundTint="@color/green"
+                   />
+
+               <!-- <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#ccc" />-->
+
+                <sun.bob.mcalendarview.views.ExpCalendarView
+                    android:id="@+id/calendar_exp"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    tools:context=".MainActivity" />
+
+
+                <LinearLayout
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/bg5">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/casesummary"
+                        android:text="Cases Summary: "
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"/>
+
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="3dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/today"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Today: "
+                            android:textStyle="bold"
+                            android:textSize="17sp"
+                            android:textColor="@color/green"/>
+
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="115dp"
+                            android:layout_toRightOf="@id/today"
+                            android:text="Total: "
+                            android:textColor="@color/green"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="3dp">
+
+
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/tommorrow"
+                            android:text="Tommorrow: "
+                            android:textStyle="bold"
+                            android:textSize="17sp"
+                            android:textColor="@color/green"/>
+
+                        <TextView
+                            android:id="@+id/disposed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="70dp"
+                            android:layout_toRightOf="@id/tommorrow"
+                            android:text="Disposed: "
+                            android:textColor="@color/green"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg5">
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="23dp"
+                            android:src="@drawable/blue"
+                            ></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shows today's date"
+                            android:textColor="@color/blue"
+                            android:layout_marginLeft="70dp"
+                            android:textStyle="bold"
+                            android:textSize="17sp"></TextView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="33dp"
+                            android:layout_height="23dp"
+                            android:src="@drawable/redd"
+                            ></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shows reserved date"
+                            android:textColor="@color/colorRed"
+                            android:layout_marginLeft="70dp"
+                            android:textSize="17sp"
+                            android:textStyle="bold"></TextView>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+<com.google.android.material.navigation.NavigationView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:id="@+id/nav_view"
+    app:headerLayout="@layout/nav_header"
+    app:menu="@menu/drawer_menu"
+    />
+    <!-- Header of navigation Drawer-->
+    <!-- Menu of navigation Drawer-->
+</androidx.drawerlayout.widget.DrawerLayout>

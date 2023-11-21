@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lawyer.Reports.Specific_Client_Cases"
+    android:orientation="vertical"
+    >
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:onClick="back"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Specific Type Cases Report"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorWhite"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/l1"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/toolbar"
+        >
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CASES OF TYPE"
+            android:background="@color/green"
+            android:textSize="17sp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            ></TextView>
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_below="@id/l1"
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TableLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_below="@id/title"
+                android:layout_marginTop="30dp"
+                android:stretchColumns="1,2,3,4,5,6,7,8,9,10,11,12">
+
+
+                <TableRow
+                    android:id="@+id/tr"
+                    android:layout_height="80dp">
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="10dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="#"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_column="1"/>
+
+
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="100dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="Case Title"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_column="1"/>
+
+
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="100dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="Court Name"
+                        android:textStyle="bold"
+                        android:layout_column="1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="100dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="Case Type"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_column="1"/>
+
+
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="150dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="Case Number"
+                        android:textStyle="bold"
+                        android:layout_column="1"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="100dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="Case Year"
+                        android:textStyle="bold"
+                        android:layout_column="1"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="150dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="On Behalf Of"
+                        android:textStyle="bold"
+                        android:layout_column="1"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="100dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="Party Name"
+                        android:textStyle="bold"
+                        android:layout_column="1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="200dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="Party Contact Number"
+                        android:textStyle="bold"
+                        android:layout_column="1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="200dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="Adverse Advocate Name"
+                        android:textStyle="bold"
+                        android:layout_column="1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="300dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="Adverse Advocate Contact Number"
+                        android:textStyle="bold"
+                        android:layout_column="1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="100dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="Respodent"
+                        android:textStyle="bold"
+                        android:layout_column="1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_margin="7dp"
+                        android:layout_height="30dp"
+                        android:layout_width="100dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:text="Field U/Sec"
+                        android:textStyle="bold"
+                        android:layout_column="1"
+                        android:gravity="center"/>
+                </TableRow>
+
+                <ListView
+                    android:background="@color/grey"
+                    android:id="@+id/list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tr"
+                    android:divider="@color/colorWhite"
+                    android:dividerHeight="20dp"
+                    android:gravity="center"
+
+                    />
+            </TableLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/img1"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/nodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img1"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text="No Cases Yet"
+        android:visibility="gone"/>
+
+</RelativeLayout>

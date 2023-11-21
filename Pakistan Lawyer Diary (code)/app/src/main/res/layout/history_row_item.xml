@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@drawable/custom_input">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Previous Date"
+        android:gravity="left"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="@drawable/bg5"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="209dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="0dp"
+        android:gravity="left"
+        android:layout_marginRight="0dp"
+        android:layout_toRightOf="@id/textView1"
+        android:padding="5dp"
+        android:text="Adjourn Date"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="@drawable/bg5"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_below="@id/textView1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Step: "
+        android:padding="5dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:background="@drawable/bg5"/>
+
+</RelativeLayout>
+
+

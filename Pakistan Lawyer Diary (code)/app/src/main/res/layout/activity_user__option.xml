@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account.User_Option"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="244dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use As Lawyer"
+        android:onClick="signinLawyer"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90dp"
+        android:textColor="@color/green"
+        android:background="@color/colorWhite"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use As Client"
+        android:onClick="signinClient"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/green"
+        android:background="@color/colorWhite"
+        />
+
+</LinearLayout>

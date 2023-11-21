@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/light_green"
+    >
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333"
+        android:textSize="18dp"
+        android:text="id"
+        android:textStyle="bold"
+        android:visibility="gone"></TextView>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333"
+        android:textSize="18dp"
+        android:text="Client name"
+        android:textStyle="bold"></TextView>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/num"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:text="phone number"
+        android:drawableTint="@color/colorWhite"
+        android:background="@color/green"
+        android:drawableLeft="@drawable/phone"
+        android:drawablePadding="5dp"
+        android:gravity="left"
+        />
+</LinearLayout>

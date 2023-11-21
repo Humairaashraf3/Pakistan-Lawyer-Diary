@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/client_reminder"
+    android:title="Client Reminder"
+    android:icon="@drawable/bell"
+    />
+    <item
+        android:id="@+id/add_step"
+        android:title="Add Step"
+        android:icon="@drawable/add_sign"
+        />
+    <item
+        android:id="@+id/history"
+        android:title="History"
+        android:icon="@drawable/history"
+        />
+    <item
+        android:id="@+id/dispose"
+        android:title="Dispose"
+        android:icon="@drawable/disposal"
+        />
+</menu>

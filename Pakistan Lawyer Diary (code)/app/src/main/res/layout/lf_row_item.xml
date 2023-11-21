@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/account_icon"
+        />
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/profile_img"
+        android:text="Lawyer Name:"
+        android:textColor="#333"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_on"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="-15dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:visibility="invisible"
+        android:layout_below="@id/name"
+        app:civ_border_color="#0fdf29"
+        android:layout_marginTop="5dp"
+        app:civ_border_width="10dp"
+        android:layout_toEndOf="@id/profile_img"
+        android:layout_toRightOf="@id/profile_img" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_off"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_marginTop="5dp"
+        app:civ_border_color="#bfbfbf"
+        app:civ_border_width="10dp"
+        android:visibility="gone"
+        android:layout_below="@id/name"
+        android:src="@mipmap/ic_launcher"
+        android:layout_toEndOf="@id/profile_img"
+        android:layout_toRightOf="@id/profile_img"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:text="last message"
+        android:id="@+id/last_msg"
+        android:textColor="@color/mdtp_dark_gray"
+        android:textSize="15sp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginTop="2dp"
+        android:maxLines="1"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/last_msg"
+        android:background="@color/grey"
+        android:layout_marginTop="15dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        />
+
+
+</RelativeLayout>

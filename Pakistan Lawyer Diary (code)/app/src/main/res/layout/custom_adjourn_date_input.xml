@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+
+
+    >
+
+    <TextView
+        android:id="@+id/alerttext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:text="Adjourn Date"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="115dp"
+        android:layout_below="@id/alerttext"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:text="Step"
+        android:textColor="#333"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ed2"
+        android:layout_width="187dp"
+        android:layout_height="52dp"
+        android:layout_below="@id/tv1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/custom_input"
+        android:padding="4dp"
+        android:focusable="false"
+        android:onClick="chooseDate"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="70dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/tv1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:text="Adjourn Date"
+        android:textColor="#333"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ed1"
+        android:layout_width="189dp"
+        android:layout_height="108dp"
+        android:layout_below="@id/alerttext"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="12dp"
+        android:padding="4dp"
+        android:gravity="top"
+        android:background="@drawable/custom_input" />
+
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:text="Image\n(Optional)"
+        android:textColor="#333"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/ed3"
+            android:layout_width="187dp"
+            android:layout_height="108dp"
+            android:layout_below="@id/ed2"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/custom_input"
+
+          />
+    <ImageButton
+        android:id="@+id/choose_image"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/ed3"
+        android:layout_marginRight="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/choose_image"
+
+       />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv3"
+        android:layout_marginTop="100dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Save"
+            android:textColor="@color/black"
+            android:background="@color/green"
+            android:layout_alignParentLeft="true"/>
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentRight="true"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:background="@color/green"/>
+    </RelativeLayout>
+</RelativeLayout>

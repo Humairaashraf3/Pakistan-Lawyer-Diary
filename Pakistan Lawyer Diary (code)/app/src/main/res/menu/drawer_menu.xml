@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:checkableBehavior="single" ><!-- only select one item at a time in group-->
+    <item
+        android:id="@+id/show_all"
+        android:icon="@drawable/case_icon"
+        android:title="Cases"
+        
+        />
+
+    <item
+        android:id="@+id/client"
+        android:icon="@drawable/clients_icon"
+        android:title="Clients"
+        />
+
+    </group>
+
+<item android:title="Reminder">
+
+<menu>
+<item
+    android:id="@+id/for_adjourn_cases"
+    android:icon="@drawable/reminder"
+    android:title= "Adjourn Cases"
+    />
+    <item
+        android:id="@+id/particular_case"
+        android:icon="@drawable/reminder"
+        android:title=" Particular Case"
+        />
+    </menu>
+
+</item>
+    <item android:title="Others">
+<menu>
+    <item
+        android:id="@+id/schedule"
+        android:title="Today's Task"
+        android:icon="@drawable/schedule_icon"
+        />
+    <item
+        android:id="@+id/chats"
+        android:icon="@drawable/chat_icon"
+        android:title="Chats"
+        />
+           <item
+                android:id="@+id/settings"
+                android:icon="@drawable/settings_icon"
+                android:title="Settings"
+                />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile_icon"
+        android:title="Profile"
+        />
+            <item
+                android:id="@+id/rate_app"
+                android:icon="@drawable/rate"
+                android:title="Rate This App"
+                />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/logout_icon"
+                android:title="Log Out"
+                />
+</menu>
+    </item>
+
+
+</menu>

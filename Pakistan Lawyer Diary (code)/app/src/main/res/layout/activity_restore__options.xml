@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Lawyer.Restore_Options"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:onClick="back"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restore Data"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="30dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/colorWhite">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel1"
+            >
+            <TextView
+                android:id="@+id/cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restore Cases"
+                android:layout_alignParentLeft="true"
+                android:textColorLink="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+            <ImageView
+                android:id="@+id/courts_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cases"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/forward"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/mng_court"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restore All Cases "
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/courts_img"
+                android:layout_alignParentLeft="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/mng_court"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+
+
+            android:id="@+id/relativerestore2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel1"
+            >
+            <TextView
+                android:id="@+id/client"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restore Clients"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:textColorLink="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+            <ImageView
+                android:id="@+id/types_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/client"
+                android:visibility="gone"
+                android:src="@drawable/forward" />
+            <TextView
+                android:id="@+id/mng_types"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restore All Client's Details"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/types_img"
+                android:layout_alignParentLeft="true"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/mng_types"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rel3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativerestore2">
+
+            <TextView
+                android:id="@+id/cname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restore Court Names"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:textColorLink="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+            <ImageView
+                android:id="@+id/disposed_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/cname"
+                android:visibility="gone"
+                android:src="@drawable/forward"/>
+            <TextView
+                android:id="@+id/show_disposed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restore All Court Names"
+                android:layout_below="@id/disposed_img"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentLeft="true"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/show_disposed"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rel4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel3"
+            >
+
+
+            <TextView
+                android:id="@+id/ctype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restore Case Types"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:textColorLink="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+            <ImageView
+                android:id="@+id/restore_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/ctype"
+                android:visibility="gone"
+                android:src="@drawable/forward"/>
+            <TextView
+                android:id="@+id/mng_restore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restore All Case Types "
+                android:layout_below="@id/restore_img"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentLeft="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/mng_restore"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"/>
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel5"
+            android:layout_below="@id/rel4"
+            >
+            <TextView
+                android:id="@+id/casehistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restore Case's History"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentLeft="true"
+                android:textColorLink="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+            <ImageView
+                android:id="@+id/ch_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/casehistory"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/forward"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/ch_court"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restore All Case's History"
+                android:layout_below="@id/ch_img"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentLeft="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ch_court"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"/>
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

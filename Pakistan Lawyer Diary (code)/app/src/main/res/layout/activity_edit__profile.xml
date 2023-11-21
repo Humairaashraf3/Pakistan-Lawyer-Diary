@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Account.Edit_Profile">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp"
+        android:id="@+id/toolbar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:onClick="back"
+            />
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Info"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorWhite"
+
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/done_icon"
+            android:layout_gravity="right"
+            android:onClick="editProfile"
+            android:layout_marginRight="20dp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+          >
+
+  <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:src="@drawable/profile_back"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_marginTop="15dp"
+                    android:drawableTint="@color/green"
+                    android:id="@+id/username"
+                    android:drawableLeft="@drawable/user"
+                    android:drawablePadding="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="user name"
+                    android:inputType="textNoSuggestions"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp"
+
+                    />
+
+                <EditText
+                    android:drawableTint="@color/green"
+                    android:drawableLeft="@drawable/phone"
+                    android:drawablePadding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/mobile_number"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="phone"
+                    android:inputType="phone"
+                    android:maxLength="30"
+                    android:paddingLeft="15dp"
+
+                />
+
+
+
+                <EditText
+                    android:drawableTint="@color/green"
+                    android:drawableLeft="@drawable/address"
+                    android:drawablePadding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/address"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="address"
+                    android:inputType="textNoSuggestions|textMultiLine"
+                    android:paddingLeft="15dp"
+                   />
+
+            <EditText
+                android:drawableTint="@color/green"
+                android:drawableLeft="@drawable/about_icon"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/about"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="About"
+                android:inputType="textMultiLine"
+                android:maxLines="20"
+                android:paddingLeft="15dp"
+                android:visibility="gone"
+
+                />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

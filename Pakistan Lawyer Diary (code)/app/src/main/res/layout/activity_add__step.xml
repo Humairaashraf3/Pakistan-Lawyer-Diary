@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lawyer.Add_Step"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:onClick="back"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Step"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorWhite"
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/done_icon"
+            android:layout_gravity="right"
+            android:onClick="save"
+            android:layout_marginRight="20dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="115dp"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:text="Step"
+        android:textColor="#333"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ed2"
+        android:layout_width="187dp"
+        android:layout_height="52dp"
+        android:layout_below="@id/tv1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/custom_input"
+        android:padding="4dp"
+        android:hint="Tap to select date"
+        android:paddingLeft="5dp"
+        android:focusable="false"
+        android:onClick="setDate"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="70dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/tv1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:text="Adjourn Date"
+        android:textColor="#333"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtime"
+        android:layout_width="187dp"
+        android:layout_height="52dp"
+        android:layout_below="@id/tv2"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/custom_input"
+        android:focusable="false"
+        android:hint="Tap to select time"
+        android:onClick="setTime"
+        android:padding="4dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:id="@+id/adtime"
+        android:layout_width="70dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/tv2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:text="Hearing Time"
+        android:textColor="#333"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ed1"
+        android:layout_width="189dp"
+        android:layout_height="108dp"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="12dp"
+        android:padding="4dp"
+        android:gravity="top"
+        android:paddingLeft="5dp"
+        android:background="@drawable/custom_input" />
+
+
+
+
+</RelativeLayout>

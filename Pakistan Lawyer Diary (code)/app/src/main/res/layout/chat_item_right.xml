@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+   >
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_right"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="hello"
+        android:textColor="@color/colorWhite"
+        android:id="@+id/show_message"
+        android:textSize="18sp"
+        android:padding="8dp"/>
+
+        <ImageView
+            android:id="@+id/sent"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/show_message"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:src="@drawable/sent"
+
+
+            />
+
+        <ImageView
+            android:id="@+id/seen"
+            android:layout_width="23dp"
+            android:layout_height="17dp"
+            android:layout_below="@id/show_message"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:src="@drawable/seen"
+            android:visibility="invisible"
+
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

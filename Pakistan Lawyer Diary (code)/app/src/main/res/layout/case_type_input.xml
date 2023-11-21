@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+
+
+    >
+    <TextView
+        android:id="@+id/alerttext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:text="Case Type"
+        />
+
+    <EditText
+        android:id="@+id/ed1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alerttext"
+        android:hint="Enter Case Type"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed1"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentLeft="true"
+        android:text="ok"
+        android:textColor="@color/black"
+        android:background="@color/green"/>
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentRight="true"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:background="@color/green"/>
+    </RelativeLayout>
+
+</RelativeLayout>

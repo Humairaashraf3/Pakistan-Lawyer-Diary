@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Lawyer.Settings"
+
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:onClick="main"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorWhite"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:paddingTop="16dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/rel1"
+          android:onClick="courtNames">
+      <TextView
+          android:id="@+id/courts"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Court Names"
+          android:layout_alignParentLeft="true"
+          android:textColorLink="#FFFFFF"
+          android:textSize="15sp"
+          android:textStyle="bold"
+          android:textColor="@color/black"
+          />
+      <ImageView
+          android:id="@+id/courts_img"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/courts"
+          android:layout_alignParentRight="true"
+          android:src="@drawable/forward"
+        />
+
+      <TextView
+          android:id="@+id/mng_court"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Manage Court Names"
+          android:layout_below="@id/courts_img"
+          android:layout_alignParentLeft="true"/>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_below="@id/mng_court"
+              android:layout_marginTop="10dp"
+              android:background="@color/black"/>
+
+      </RelativeLayout>
+
+
+    <RelativeLayout
+
+
+        android:id="@+id/rel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel1"
+        android:onClick="caseTypes">
+      <TextView
+          android:id="@+id/types"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Case Types"
+          android:layout_alignParentLeft="true"
+          android:layout_marginTop="10dp"
+          android:textColorLink="#FFFFFF"
+          android:textSize="15sp"
+          android:textStyle="bold"
+          android:textColor="@color/black"
+          />
+      <ImageView
+          android:id="@+id/types_img"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_below="@id/types"
+          android:src="@drawable/forward" />
+      <TextView
+          android:id="@+id/mng_types"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Manage Case Types"
+          android:layout_below="@id/types_img"
+          android:layout_alignParentLeft="true"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/mng_types"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel2"
+        android:onClick="showDisposedCases">
+
+      <TextView
+          android:id="@+id/disposed"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Disposed Cases"
+          android:layout_alignParentLeft="true"
+          android:layout_marginTop="10dp"
+          android:textColorLink="#FFFFFF"
+          android:textSize="15sp"
+          android:textStyle="bold"
+          android:textColor="@color/black"
+          />
+      <ImageView
+          android:id="@+id/disposed_img"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_below="@id/disposed"
+          android:src="@drawable/forward"/>
+      <TextView
+          android:id="@+id/show_disposed"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Show All Disposed Cases"
+          android:layout_below="@id/disposed_img"
+          android:layout_alignParentLeft="true"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/show_disposed"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel3"
+        android:onClick="restoreData">
+
+
+      <TextView
+          android:id="@+id/restore"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Restore Data"
+          android:layout_alignParentLeft="true"
+          android:layout_marginTop="10dp"
+          android:textColorLink="#FFFFFF"
+          android:textSize="15sp"
+          android:textStyle="bold"
+          android:textColor="@color/black"
+          />
+      <ImageView
+          android:id="@+id/restore_img"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_below="@id/restore"
+          android:src="@drawable/forward"/>
+      <TextView
+          android:id="@+id/mng_restore"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Restore Data In New Phone / Data Loss Issue "
+          android:layout_below="@id/restore_img"
+          android:layout_alignParentLeft="true"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/mng_restore"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"/>
+
+    </RelativeLayout>
+
+
+
+      <RelativeLayout
+          android:id="@+id/rel6"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/rel4"
+          android:onClick="report">
+
+
+          <TextView
+              android:id="@+id/report"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Generate Report"
+              android:layout_alignParentLeft="true"
+              android:layout_marginTop="10dp"
+              android:textColorLink="#FFFFFF"
+              android:textSize="15sp"
+              android:textStyle="bold"
+              android:textColor="@color/black"
+              />
+          <ImageView
+              android:id="@+id/report_img"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_below="@id/report"
+              android:src="@drawable/forward"/>
+          <TextView
+              android:id="@+id/reports"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Genearte Reports "
+              android:layout_below="@id/report_img"
+              android:layout_alignParentLeft="true"/>
+      </RelativeLayout>
+
+  </RelativeLayout>
+
+
+</LinearLayout>

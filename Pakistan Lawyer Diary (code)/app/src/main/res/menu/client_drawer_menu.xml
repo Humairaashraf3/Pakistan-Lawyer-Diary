@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:checkableBehavior="single" ><!-- only select one item at a time in group-->
+        <item
+            android:id="@+id/search"
+            android:icon="@drawable/search_icon"
+            android:title="Search Lawyer"
+
+            />
+        <item
+            android:id="@+id/chat"
+            android:icon="@drawable/chat_icon"
+            android:title="Chat"
+
+            />
+
+    </group>
+
+
+
+        <item android:title="Others">
+
+            <menu>
+                <item
+                    android:id="@+id/profile"
+                    android:icon="@drawable/profile_icon"
+                    android:title="Profile"
+                    />
+
+                <item
+                    android:id="@+id/rate_app"
+                    android:icon="@drawable/rate"
+                    android:title="Rate This App"
+                    />
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/logout_icon"
+                    android:title="Log Out"
+                    />
+            </menu>
+
+        </item>
+
+
+
+
+
+</menu>

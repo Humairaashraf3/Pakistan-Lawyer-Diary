@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">PakistanLawyerDiary</string>
+    <string name="navigation_drawer_open">Close navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="not_registerted">Not Registerted?</string>
+
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="forgot_password">FORGOT PASSWORD?</string>
+    <string name="new_user_register_now">New User ? Register Now</string>
+
+    <string-array name="courtname">
+
+        <item>CIVIL</item>
+
+        <item>DISTRICT AND SESSION</item>
+
+        <item>HIGH</item>
+
+        <item>SUPREME</item>
+
+        <item>SPECIAL</item>
+
+    </string-array>
+
+
+    <string-array name="casetype">
+
+        <item>Civil Matter</item>
+
+        <item>Revenue</item>
+
+        <item>Rent matter</item>
+
+        <item>Execution</item>
+
+        <item>Recovery</item>
+
+        <item>contract</item>
+
+        <item>Criminal Family Matter</item>
+
+        <item>Bail</item>
+
+        <item>Civil Appel</item>
+
+        <item>crl Appel</item>
+
+        <item>Civil Revision</item>
+
+        <item>crl Revision</item>
+
+    </string-array>
+    <string-array name="onbehalfof">
+
+        <item>Plaintiff</item>
+
+        <item>Defendent</item>
+
+        <item>Petitioner</item>
+
+        <item>Respondent</item>
+
+        <item>Appellant</item>
+
+        <item>Complainent</item>
+
+        <item>Accused</item>
+
+    </string-array>
+    <string-array name="party">
+
+        <item>a</item>
+
+        <item>b</item>
+
+        <item>c</item>
+
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

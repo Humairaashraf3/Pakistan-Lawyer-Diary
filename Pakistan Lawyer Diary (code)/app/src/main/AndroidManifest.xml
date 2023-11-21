@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pakistanlawyerdiary">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Lawyer.Restore_Options"></activity>
+        <activity android:name=".Lawyer.Schedule" />
+        <activity android:name=".Account.Edit_Profile" />
+        <activity android:name=".Account.Profile" />
+        <activity
+            android:name=".Lawyer.Reminder.Edit_Reminder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Reminder.Add_Reminder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Add_Step"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Account.Reset_Password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Account.SignIn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Account.SignUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Adjourn_Cases"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Reminder.Reminder_For_Particular_Case"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Reminder.Reminder_For_Adjourn_Day_Cases"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Lawyer.Reports.Specific_Advocate_Cases" />
+        <activity android:name=".Lawyer.Reports.Specific_Client_Cases" />
+        <activity android:name=".Lawyer.Reports.Specific_Year_Cases" />
+        <activity android:name=".Lawyer.Reports.Specific_Type_Cases" />
+        <activity
+            android:name=".Lawyer.Reports.Report"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Lawyer_Messages"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Lawyer_Chat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Client.Messages"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Client.Client_Chat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Client.Search_Lawyer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Client.Lawyer_Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Client.ClientMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Disposed_Case_Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Update_Client"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.All_Clients"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Client_Reminder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Share_Case"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Case_History"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Edit_Case"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Case_Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Disposed_Cases"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Case_Types"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Court_Names"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Add_Client"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.Add_Case"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lawyer.All_Cases"
+            android:screenOrientation="portrait" /> <!-- to make activity without title bar -->
+        <activity
+            android:name=".Account.Start"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- to make start activity as launcher activity -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Lawyer.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".Notifications.MyFirebaseIdService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Notifications.MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".Lawyer.Reminder.Adjourn_Notification_Reciever" />
+        <receiver android:name=".Lawyer.Reminder.Particular_Notification_Reciever" />
+    </application>
+
+</manifest>

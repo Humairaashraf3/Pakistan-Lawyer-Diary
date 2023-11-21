@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Client.ClientMainActivity"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pakistan Lawyer Diary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="@drawable/clientmain_back1"
+        android:orientation="vertical"
+    >
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:text="Pakistan Lawyer Diary - The help you need by top experts"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/circle"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp" android:textStyle="bold"
+                android:text="Find a best lawyer."/>
+
+        </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           >
+           <ImageView
+               android:layout_width="10dp"
+               android:layout_height="10dp"
+               android:src="@drawable/circle"
+               android:layout_marginLeft="13dp"
+               android:layout_marginTop="5dp"/>
+           <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+               android:layout_marginLeft="10dp"
+            android:textSize="15sp" android:textStyle="bold"
+            android:text="Chat with an online lawyer whenever and wherever you need it. "/>
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          >
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/circle"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp" android:textStyle="bold"
+                android:text="Keep yourself,your rights and your family safe with professional legal advice."/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:paddingLeft="10dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:paddingRight="10dp"
+            android:layout_margin="50dp"
+            android:onClick="chat"
+            android:text="Chat with lawyer now !"/>
+    </RelativeLayout>
+
+      <!--  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lawyers"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textColorLink="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"></TextView>
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:divider="@color/colorWhite"
+                    android:dividerHeight="20dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>-->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/client_drawer_menu"
+        />
+    <!-- Header of navigation Drawer-->
+    <!-- Menu of navigation Drawer-->
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,2 +1,2 @@
 # Pakistan-Lawyer-Diary
-android java app
+android java App

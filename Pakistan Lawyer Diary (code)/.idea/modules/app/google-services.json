@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "498760823964",
+    "project_id": "pakistanlawyerdiary",
+    "storage_bucket": "pakistanlawyerdiary.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498760823964:android:74b845493d9035d27ca959",
+        "android_client_info": {
+          "package_name": "com.example.pakistanlawyerdiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498760823964-ecsup3th1vibmkc9c3tdnhajchr50uct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pakistanlawyerdiary",
+            "certificate_hash": "9a73631a0098cdaca5976b26563f72d119a573a4"
+          }
+        },
+        {
+          "client_id": "498760823964-348t807ssd1u123ov571590mc9eq9vui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMIsMAfksroELgLsavFL4Y-XUAUpIRbsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498760823964-348t807ssd1u123ov571590mc9eq9vui.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
